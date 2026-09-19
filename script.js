@@ -10,7 +10,7 @@ const equipamentos = [
     id: "mini-cacamba",
     nome: "Mini Caçamba",
     diaria: 99.9,
-    disponivel: false,
+    disponivel: true,
     icone: "▰",
   },
   {
@@ -73,14 +73,14 @@ function escaparHTML(texto) {
 function renderizarEquipamentos() {
   const imagens = {
     "mini-cacamba": "assets/mini-cacamba.webp",
-    "betoneira": "assets/betoneira.webp",
-    "compactador": "assets/compactador.webp",
+    betoneira: "assets/betoneira.webp",
+    compactador: "assets/compactador.webp",
   };
 
   const descricoes = {
     "mini-cacamba": "Ideal para pequenas e médias obras.",
-    "betoneira": "Mais agilidade e eficiência na sua obra.",
-    "compactador": "Compactação de solo com alto desempenho.",
+    betoneira: "Mais agilidade e eficiência na sua obra.",
+    compactador: "Compactação de solo com alto desempenho.",
   };
 
   equipamentosEl.innerHTML = equipamentos
@@ -203,8 +203,8 @@ function atualizarResumo() {
   if (resumoImagem) {
     const imagens = {
       "mini-cacamba": "assets/mini-cacamba.webp",
-      "betoneira": "assets/betoneira.webp",
-      "compactador": "assets/compactador.webp",
+      betoneira: "assets/betoneira.webp",
+      compactador: "assets/compactador.webp",
     };
     resumoImagem.src = imagens[equipamentoSelecionado.id] || "";
     resumoImagem.alt = equipamentoSelecionado.nome;
