@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="C'LOC - Locação de mini caçambas, betoneiras e compactadores de solo para obras.">
+  <meta name="theme-color" content="#101316">
+  <title>C'LOC | Locações de Equipamentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container topo-inner">
+      <a href="#" class="marca" aria-label="C'LOC - início">
+        <img src="assets/logo.png" alt="C'LOC - Locações de Mini Caçambas e Equipamentos para Obras">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <a class="ativo" href="#inicio">Início</a>
+        <a href="#equipamentos-section">Equipamentos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="whatsapp-topo" href="https://wa.me/5598985405248" target="_blank" rel="noopener">
+        <span class="wa-mark">◉</span>
+        <span>Fale conosco<br><small>pelo WhatsApp</small></span>
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="tag">LOCAÇÃO DE EQUIPAMENTOS PARA SUA OBRA</span>
+
+          <h1>
+            O EQUIPAMENTO
+            <span>CERTO PARA</span>
+            SUA OBRA.
+          </h1>
+
+          <div class="linha-amarela"></div>
+
+          <p>
+            Escolha o equipamento, informe a quantidade e os dias.
+            O sistema calcula o valor estimado e envia sua solicitação
+            diretamente para nossa equipe.
+          </p>
+
+          <div class="hero-beneficios">
+            <div><b>ϟ</b><span>Atendimento<br><strong>rápido</strong></span></div>
+            <div><b>▦</b><span>Cálculo<br><strong>automático</strong></span></div>
+            <div><b>◉</b><span>Solicite pelo<br><strong>WhatsApp</strong></span></div>
+          </div>
+        </div>
+
+        <div class="hero-equipamentos" aria-hidden="true">
+          <img src="assets/mini-cacamba.webp" alt="">
+          <img src="assets/betoneira.webp" alt="">
+          <img src="assets/compactador.webp" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="equipamentos-section" class="catalogo container secao">
+      <div class="titulo-secao">
+        <span>1</span>
+        <div>
+          <h2>Escolha seu equipamento</h2>
+          <p>Selecione o equipamento, a quantidade e por quantos dias você precisa.</p>
+        </div>
+      </div>
+
+      <div id="equipamentos" class="equipamentos"></div>
+    </section>
+
+    <section class="operacao">
+      <div class="container operacao-grid">
+
+        <div id="resumo" class="painel-resumo hidden">
+          <div class="titulo-painel">
+            <span>2</span>
+            <div>
+              <h2>Sua locação</h2>
+              <p>Confira os dados antes de enviar.</p>
+            </div>
+          </div>
+
+          <div class="resumo-card">
+            <div class="resumo-thumb">
+              <img id="resumoImagem" src="assets/mini-cacamba.webp" alt="">
+            </div>
+            <div class="resumo-info">
+              <small>EQUIPAMENTO SELECIONADO</small>
+              <strong id="resumoEquipamento">-</strong>
+              <div class="resumo-detalhes">
+                <span><b id="resumoQuantidade">0</b> equipamento(s)</span>
+                <span><b id="resumoDias">0</b> dia(s)</span>
+              </div>
+            </div>
+            <div class="resumo-diaria">
+              <small>DIÁRIA</small>
+              <strong id="resumoDiaria">R$ 0,00</strong>
+            </div>
+          </div>
+
+          <div class="total-card">
+            <small>TOTAL ESTIMADO</small>
+            <strong id="resumoTotal">R$ 0,00</strong>
+            <span>Valor calculado conforme quantidade × dias × diária.</span>
+          </div>
+
+          <div class="seguranca">
+            <span>✓</span>
+            <p><strong>Valores sujeitos à disponibilidade.</strong><br>Pagamento e condições finais serão confirmados pelo atendimento.</p>
+          </div>
+        </div>
+
+        <section id="secao-formulario" class="painel-formulario hidden">
+          <div class="titulo-painel">
+            <span>3</span>
+            <div>
+              <h2>Informe seus dados</h2>
+              <p>Preencha os dados e envie sua solicitação pelo WhatsApp.</p>
+            </div>
+          </div>
+
+          <form id="formLocacao" class="formulario">
+            <div class="campo">
+              <label for="nome">Nome completo</label>
+              <div class="input-wrap"><i>♙</i><input id="nome" name="nome" type="text" placeholder="Seu nome completo" autocomplete="name" required></div>
+            </div>
+
+            <div class="campo">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <div class="input-wrap"><i>⌕</i><input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(98) 99999-9999" autocomplete="tel" required></div>
+            </div>
+
+            <div class="campo">
+              <label for="endereco">Endereço</label>
+              <div class="input-wrap"><i>⌂</i><input id="endereco" name="endereco" type="text" placeholder="Rua, número, bairro..." autocomplete="street-address" required></div>
+            </div>
+
+            <div class="campo">
+              <label for="cidade">Cidade</label>
+              <div class="input-wrap"><i>⌖</i><input id="cidade" name="cidade" type="text" placeholder="Sua cidade" autocomplete="address-level2" required></div>
+            </div>
+
+            <label class="checkbox">
+              <input id="aceite" type="checkbox" required>
+              <span>Confirmo que os dados estão corretos e autorizo o envio da solicitação.</span>
+            </label>
+
+            <button id="btnEnviar" class="btn-principal" type="submit">
+              <span class="wa-button-icon">◉</span>
+              <span>SOLICITAR LOCAÇÃO</span>
+              <b>→</b>
+            </button>
+
+            <p class="aviso">
+              A disponibilidade, pagamento e demais condições serão confirmados pelo funcionário via WhatsApp.
+            </p>
+
+            <div id="mensagem" class="mensagem" role="status" aria-live="polite"></div>
+          </form>
+        </section>
+
+      </div>
+    </section>
+
+    <section id="como-funciona" class="beneficios">
+      <div class="container beneficios-grid">
+        <div class="beneficio">
+          <span>✓</span><div><strong>Equipamentos revisados</strong><small>Mais segurança e produtividade para sua obra.</small></div>
+        </div>
+        <div class="beneficio">
+          <span>↠</span><div><strong>Entrega rápida</strong><small>Agilidade para sua obra não parar.</small></div>
+        </div>
+        <div class="beneficio">
+          <span>◉</span><div><strong>Suporte especializado</strong><small>Tire suas dúvidas com nossa equipe.</small></div>
+        </div>
+        <div class="beneficio">
+          <span>★</span><div><strong>Qualidade garantida</strong><small>Equipamentos para diferentes necessidades.</small></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contato">
+    <div class="container footer-grid">
+      <div class="footer-marca">
+        <img src="assets/logo.png" alt="C'LOC">
+        <div>
+          <strong>Construindo grandes<br>projetos juntos!</strong>
+        </div>
+      </div>
+
+      <a class="footer-whatsapp" href="https://wa.me/5598985405248" target="_blank" rel="noopener">
+        <span>◉</span>
+        <div><strong>Fale conosco pelo WhatsApp</strong><small>Solicite seu orçamento agora mesmo!</small></div>
+      </a>
+
+      <div class="privacidade"><span>⌕</span><small>Seus dados estão<br>seguros conosco.</small></div>
+    </div>
+    <div class="container copyright">© C'LOC Locações. Todos os direitos reservados.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
