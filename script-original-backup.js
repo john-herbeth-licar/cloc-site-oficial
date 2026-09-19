@@ -10,14 +10,14 @@ const equipamentos = [
     id: "mini-cacamba",
     nome: "Mini Caçamba",
     diaria: 99.9,
-    disponivel: false,
+    disponivel: true,
     icone: "▰",
   },
   {
     id: "betoneira",
     nome: "Betoneira",
     diaria: 83.33,
-    disponivel: true,
+    disponivel: false,
     icone: "◈",
   },
   {
